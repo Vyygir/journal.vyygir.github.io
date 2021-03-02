@@ -1,0 +1,41 @@
+.post-item {
+    &:not(:last-of-type) {
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        margin: 0 0 15px;
+        font-size: 36px;
+    }
+
+    &__content {
+        margin-bottom: 15px;
+
+        p {
+            margin: 0;
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+
+    &__meta {
+        display: flex;
+    }
+
+    &__date {
+        color: var(--color-anchor);
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .tag-list {
+        margin-left: 10px;
+
+        &::before {
+            content: "—";
+            font-size: 15px;
+            color: #888;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+:root {
+    --color-primary: #121212;
+    --color-anchor: #555;
+
+    --font-family-body: 'IBM Plex Sans';
+    --font-family-heading: 'Oswald';
+    --font-family-mono: 'Source Code';
+
+    --anaglpyh-opacity: 0.75;
+    --anaglyph-red: rgba(255, 0, 0, var(--anaglpyh-opacity));
+    --anaglyph-cyan: rgba(0, 255, 255, var(--anaglpyh-opacity));
+}

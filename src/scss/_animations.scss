@@ -1,0 +1,7 @@
+@keyframes anaglyph-blur {
+    0%   { text-shadow: 0 0 0 var(--anaglyph-red), 0 0 0 var(--anaglyph-cyan); }
+    25%  { text-shadow: -5px -5px 0 var(--anaglyph-red), 5px 5px 0 var(--anaglyph-cyan); }
+    50%  { text-shadow: 0 0 0 var(--anaglyph-red), 0 0 0 var(--anaglyph-cyan); }
+    75%  { text-shadow: -5px 5px 0 var(--anaglyph-red), 5px -5px 0 var(--anaglyph-cyan); }
+    100% { text-shadow: 0 0 0 var(--anaglyph-red), 0 0 0 var(--anaglyph-cyan); }
+}

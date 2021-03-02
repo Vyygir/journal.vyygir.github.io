@@ -1,0 +1,19 @@
+.page-header {
+    background-color: var(--color-primary);
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    &__title {
+        margin: 0;
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        text-shadow: -5px -5px 0 var(--anaglyph-red), 5px 5px 0 var(--anaglyph-cyan);
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        user-select: none;
+    }
+}
