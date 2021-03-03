@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -35,7 +35,7 @@ ReactDOM.render(
                         <Switch>
                             <Route path='/not-found' component={ EmptyView } />
                             <Route path='/post/:slug' component={ PostView } />
-                            <Route path='/' component={ PostList } />
+                            <Route exact path='/' component={ PostList } />
                             <Route component={ EmptyView } />
                         </Switch>
                     </Wrapper>
