@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
@@ -27,7 +27,7 @@ ReactDOM.render(
                 <title>{ pageTitle }</title>
             </Helmet>
 
-            <Router>
+            <Router basename={ process.env.PUBLIC_URL }>
                 <Header title={ pageTitle } />
 
                 <div className='container'>
