@@ -8,6 +8,7 @@ import gfm from 'remark-gfm';
 import Moment from 'react-moment';
 
 import getPost from '../data/post';
+import OpenGraph from './OpenGraph';
 import TagList from './TagList';
 import CodeBlock from './CodeBlock';
 
@@ -70,6 +71,13 @@ export default class PostView extends React.Component {
                 <Helmet>
                     <title>Reading: "{ post.title }"</title>
                 </Helmet>
+
+                <OpenGraph
+                    title={ post.title }
+                    type='article'
+                    description={ post.excerpt || '' }
+                    url={ `${process.env.PUBLIC_URL}/post/${post.slug}` }
+                />
 
                 <div className={ 'post-view' }>
                     <h2 className='post-view__title anaglyph-title'>

@@ -13,6 +13,12 @@ export default class EmptyView extends React.Component {
                     <title>There's nothing here</title>
                 </Helmet>
 
+                <OpenGraph
+                    title="There's nothing here"
+                    description="You've found nothing. Well done."
+                    url={ `${process.env.PUBLIC_URL}/not-found` }
+                />
+
                 <div className={ 'post-view' }>
                     <h2 className='post-view__title anaglyph-title'>
                         <span>You've found nothing. Well done.</span>

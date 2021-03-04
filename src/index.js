@@ -12,6 +12,7 @@ import './scss/core.scss';
 
 import { getRandomTitle } from './scripts/TitleRandomiser';
 
+import OpenGraph from './components/OpenGraph';
 import Header from './components/Header';
 import Wrapper from './components/Wrapper';
 import PostList from './components/PostList';
@@ -26,6 +27,8 @@ ReactDOM.render(
             <Helmet>
                 <title>{ pageTitle }</title>
             </Helmet>
+
+            <OpenGraph title='journal.vyygir.me' />
 
             <Router basename={ process.env.PUBLIC_URL }>
                 <Header title={ pageTitle } />
