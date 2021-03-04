@@ -34,8 +34,22 @@ export default class PostItem extends React.Component {
             });
         }
 
+        let featuredImage = '';
+
+        if (data.featuredImage) {
+            featuredImage = (
+                <figure className={ 'post-item__image' }>
+                    <Link to={ `/post/${ data.slug }` }>
+                        <img src={ data.featuredImage.url } alt="{ data.title }" title={ data.featuredImage.title } />
+                    </Link>
+                </figure>
+            );
+        }
+
         return (
             <div className={ 'post-item' }>
+                { featuredImage }
+
                 <article className={ 'post-item__content' }>
                     <h3 className='post-item__title anaglyph-title'>
                         <Link to={ `/post/${ data.slug }` }>{ data.title }</Link>

@@ -6,6 +6,10 @@ const query = `{
             title
             slug
             excerpt
+            featuredImage {
+                url
+                title
+            }
             tagCollection {
                 items {
                     title
