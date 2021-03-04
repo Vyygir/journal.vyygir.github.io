@@ -48,11 +48,12 @@ h6 {
 
 .anaglyph-title {
     a, span {
-        display: inline-block;
+        display: inline;
         background-color: var(--color-primary);
         padding: 0 6px 4px 6px;
         color: #fff;
         text-decoration: none;
+        white-space: pre-wrap;
     }
 
     span,
