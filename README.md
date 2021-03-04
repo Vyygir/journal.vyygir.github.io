@@ -100,4 +100,4 @@ Similarly to issues, I'm totally open to pull requests. Again, just follow the t
 
 ## License
 
-Licensing information can be viewed [here](LICENSE.MD).
+Licensing information can be viewed [here](LICENSE.md).
