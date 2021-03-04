@@ -5,6 +5,10 @@ const query = `{
         items {
             title
             content
+            featuredImage {
+                url
+                title
+            }
             tagCollection {
                 items {
                     title

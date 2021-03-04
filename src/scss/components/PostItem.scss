@@ -3,6 +3,21 @@
         margin-bottom: 50px;
     }
 
+    &__image {
+        margin: 0 0 20px;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            box-shadow: -6px -6px 0 var(--anaglyph-red), 6px 6px 0 var(--anaglyph-cyan);
+
+            &:hover {
+                box-shadow: -6px -6px 0 var(--anaglyph-cyan), 6px 6px 0 var(--anaglyph-red);
+            }
+        }
+    }
+
     &__title {
         margin: 0 0 15px;
         font-size: 36px;

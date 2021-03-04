@@ -3,6 +3,17 @@
     margin-right: auto;
     margin-left: auto;
 
+    &__image {
+        margin: 0 0 30px;
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            box-shadow: -6px -6px 0 var(--anaglyph-red), 6px 6px 0 var(--anaglyph-cyan);
+        }
+    }
+
     &__title {
         margin: 0 0 15px;
         font-size: 45px;

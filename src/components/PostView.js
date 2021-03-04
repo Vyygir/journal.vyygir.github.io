@@ -65,6 +65,16 @@ export default class PostView extends React.Component {
             );
         }
 
+        let featuredImage = '';
+
+        if (post.featuredImage) {
+            featuredImage = (
+                <figure className={ 'post-view__image' }>
+                    <img src={ post.featuredImage.url } alt={ post.title } title={ post.featuredImage.title } />
+                </figure>
+            );
+        }
+
         return (
             <Fragment>
                 <Helmet>
@@ -72,6 +82,8 @@ export default class PostView extends React.Component {
                 </Helmet>
 
                 <div className={ 'post-view' }>
+                    { featuredImage }
+
                     <h2 className='post-view__title anaglyph-title'>
                         <span>{ post.title }</span>
                     </h2>
