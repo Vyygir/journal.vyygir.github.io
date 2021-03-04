@@ -4,6 +4,8 @@ const query = `{
     postCollection(where: {slug: "{slug}"}) {
         items {
             title
+            slug
+            excerpt
             content
             tagCollection {
                 items {
