@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# 📕 journal.vyygir.me
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is just the React front-end for my online journal. The whole purpose is to keep is simplistic, with some boring and generic styles, and focus on primarily serving content that's been written.
 
-## Available Scripts
+It's honestly nothing special. But if you're viewing the code, I assume you've been on the site.
 
-In the project directory, you can run:
+If not, then you should probably check it out [here](https://journal.vyygir.me).
 
-### `yarn start`
+## Stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The entire setup is pretty straightforward. The front-end is written, as you can see above, in React. The content comes from Contentful because that's what I felt like trying out at the time.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Local setup
 
-### `yarn test`
+So you want to set the build up locally for some reason? Fair enough. It's pretty straightforward, so just follow the notes below.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `yarn build`
+- A Contentful account with a public space
+- A Contentful access token
+- `yarn`/`npm` installed on your machine
+- Some sort of experience with JavaScript and React
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Configuration
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Copy the `.env.example` in the root of the project to `.env` and add your Contentful space ID and access token.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+In a production environment (or even public-facing environment), you should really be using the server to add these to the environment, rather than the configuration files. I'm using Github Pages to serve mine, so I can add any environment variables in the repository settings.
 
-### `yarn eject`
+For anything else, you're on your own. I'm not offering support for setting up your environment.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Build
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+To work on the project, it's as simple as using `create-react-app`'s commands:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+> yarn
+> yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Or if, for some reason, you prefer `npm` then run the following commands:
 
-## Learn More
+```
+> npm install
+> npm run start
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+This watches the project, builds the assets, and serves it locally for you to work. Once you're ready to build the app, just run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+yarn build
+```
 
-### Code Splitting
+Or again, alternatively:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm run build
+```
 
-### Analyzing the Bundle Size
+### Deploying to Github Pages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+`gh-pages` is setup on the project, as it's what I'm using to host the site. So you can deploy to your own environment by updating the `homepage` line in `package.json` to your page domain:
 
-### Making a Progressive Web App
+```
+{
+    ..
+    "homepage": "YOUR_PAGE_DOMAIN_HERE",
+    ..
+}
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You'll also need to make sure that the repository you're using is *your own, and not this one*.
 
-### Advanced Configuration
+Other than that, as long you've set everything up correctly, you can run the deploy command:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```
+yarn deploy
+```
 
-### Deployment
+And voila, you're now running my journal project for some reason.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Maintenance
 
-### `yarn build` fails to minify
+### The future
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I do plan to keep this updated for the forseeable future whilst I add more features and generally expand it. The purpose of the project, as well as being my own journal, is to create my own learning experience around React. So whilst I may not be pushing changes every day, whenever I've built something new on it that I actually want to be part of the build, it'll get added.
+
+### Issues
+
+I've setup a two issue templates for reporting issues (which also includes for myself) to keep things organised:
+
+- **Bug:** Report a bug in the build, browser or functional
+- **Feature:** Request or suggest a new feature
+
+If you submit an issue, please follow this, or I'm just going to close whatever you've submitted.
+
+### Pull requests
+
+Similarly to issues, I'm totally open to pull requests. Again, just follow the template and try and follow the overall "style" of the code, and it'll likely get in.
+
+## License
+
+Licensing information can be viewed (here)[LICENSE.MD].
