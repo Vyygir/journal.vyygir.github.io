@@ -15,7 +15,7 @@
     }
 
     &__title {
-        margin: 0 0 15px;
+        margin: 0 0 30px;
         font-size: 45px;
         line-height: 70px;
         text-align: center;
@@ -49,6 +49,12 @@
     }
 
     &__content {
+        h2, h3, h4, h5, h6 {
+            margin-bottom: 10px;
+            font-family: var(--font-family-body);
+            font-weight: 600;
+        }
+
         a {
             background-color: var(--color-primary);
             padding: 0 3px;
@@ -59,6 +65,14 @@
             &:hover {
                 text-shadow: -2px -2px 0 var(--anaglyph-red), 2px 2px 0 var(--anaglyph-cyan);
             }
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 30px 8px;
+            box-shadow: -6px -6px 0 var(--anaglyph-red), 6px 6px 0 var(--anaglyph-cyan);
         }
     }
 }
