@@ -12,11 +12,11 @@ import './scss/core.scss';
 
 import { getRandomTitle } from './scripts/TitleRandomiser';
 
-import Header from './components/Header';
-import Wrapper from './components/Wrapper';
-import PostList from './components/PostList';
-import PostView from './components/PostView';
-import EmptyView from './components/EmptyView';
+import Header from './layout/Header';
+import Wrapper from './layout/Wrapper';
+import PostList from './views/PostList';
+import PostView from './views/PostView';
+import EmptyView from './views/EmptyView';
 
 const pageTitle = getRandomTitle();
 

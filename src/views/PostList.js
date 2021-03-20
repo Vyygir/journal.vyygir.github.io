@@ -1,7 +1,8 @@
 import React from 'react';
 
 import getPosts from '../data/posts';
-import PostItem from './PostItem';
+import PostListSkeleton from '../skeletons/PostList';
+import PostItem from '../components/PostItem';
 
 import '../scss/components/PostList.scss';
 
@@ -25,7 +26,7 @@ export default class PostList extends React.Component {
     }
 
     render() {
-        let postMarkup = <div className={ 'test' }>skeleton goes here</div>;
+        let postMarkup = <PostListSkeleton />;
 
         if (this.state.posts) {
             postMarkup = this.state.posts.map((post, index) => <PostItem data={ post } key={ index } />);

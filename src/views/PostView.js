@@ -1,15 +1,15 @@
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet-async';
-import Skeleton from 'react-loading-skeleton';
 import { Redirect } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import gfm from 'remark-gfm';
 import Moment from 'react-moment';
 
 import getPost from '../data/post';
-import TagList from './TagList';
-import CodeBlock from './CodeBlock';
+import PostViewSkeleton from '../skeletons/PostView';
+import TagList from '../components/TagList';
+import CodeBlock from '../components/CodeBlock';
 
 import '../scss/components/PostView.scss';
 
@@ -37,25 +37,7 @@ export default class PostView extends React.Component {
 
         if (post === null) {
             return (
-                <Fragment>
-                    <Helmet>
-                        <title>Loading post</title>
-                    </Helmet>
-
-                    <div className={ 'post-view' }>
-                        <h2 className='post-view__title'>
-                            <Skeleton />
-                        </h2>
-                        
-                        <div className="post-view__meta">
-                            <Skeleton width={ 300 } height={ 15 } />
-                        </div>
-
-                        <article className="post-view__content">
-                            <Skeleton count={ 20 } />
-                        </article>
-                    </div>
-                </Fragment>
+                <PostViewSkeleton />
             );
         }
 
