@@ -81,7 +81,12 @@ export default class PostView extends React.Component {
                     </div>
 
                     <article className="post-view__content">
-                        <ReactMarkdown source={ post.content } renderers={{ code: CodeBlock }} plugins={ [ gfm ] } />
+                        <ReactMarkdown
+                            children={post.content}
+                            renderers={{ code: CodeBlock }}
+                            plugins={[gfm]}
+                            allowDangerousHtml={true}
+                        />
                     </article>
                 </div>
             </Fragment>
